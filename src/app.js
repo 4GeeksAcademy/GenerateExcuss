@@ -9,10 +9,10 @@ window.onload = function() {
   //write your code here
   console.log("Hello from the console!");
 
-  let quien = ["el Perro", "el gato", "la lluvia"];
-  let accion = ["se comió", "orino", "mojo"];
-  let aCualCosa = ["la tarea", "la casa", "el carro"];
-  let cuando = [
+  let who = ["el Perro", "el gato", "la lluvia"];
+  let action = ["se comió", "orino", "mojo"];
+  let what = ["la tarea", "la casa", "el carro"];
+  let when = [
     "ayer",
     "cuando dormia",
     "durante el almuerzo",
@@ -20,12 +20,12 @@ window.onload = function() {
   ];
 
   let generateExcuse = () => {
-    let whoQuien = [Math.floor(Math.random() * quien.length)];
-    let actAccion = [Math.floor(Math.random() * accion.length)];
-    let acualWhat = [Math.floor(Math.random() * aCualCosa.length)];
-    let cuandoWhen = [Math.floor(Math.random() * cuando.length)];
+    let whoIndex = [Math.floor(Math.random() * who.length)];
+    let actionIndex = [Math.floor(Math.random() * action.length)];
+    let whatIndex = [Math.floor(Math.random() * what.length)];
+    let whenIndex = [Math.floor(Math.random() * when.length)];
 
-    return `${quien[whoQuien]} ${accion[actAccion]} ${aCualCosa[acualWhat]} ${cuando[cuandoWhen]}`;
+    return `${who[whoIndex]} ${action[actionIndex]} ${what[whatIndex]} ${when[whenIndex]}`;
   };
 
   document.querySelector("#excuse").textContent = generateExcuse();
